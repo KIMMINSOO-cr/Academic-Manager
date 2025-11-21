@@ -34,7 +34,7 @@ public class MainForm extends javax.swing.JFrame {
             tabMenu.addTab("성적조회", new StudentGradeForm(myID));
         } else if (role.equals("교수")) {
             tabMenu.addTab("강의관리", new javax.swing.JPanel());
-            tabMenu.addTab("성적입력", new javax.swing.JPanel());
+            tabMenu.addTab("성적입력", new ProfessorGradeForm(myID));
         } else {
             tabMenu.addTab("사용자관리", new javax.swing.JPanel());
             tabMenu.addTab("학사관리", new javax.swing.JPanel());
@@ -66,7 +66,7 @@ public class MainForm extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(59, Short.MAX_VALUE)
+                .addContainerGap(893, Short.MAX_VALUE)
                 .addComponent(lblUserInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(56, 56, 56))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -83,11 +83,12 @@ public class MainForm extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(27, 27, 27)
-                        .addComponent(btnLogout))
+                        .addComponent(btnLogout)
+                        .addContainerGap(392, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(tabMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(19, Short.MAX_VALUE))
+                        .addComponent(tabMenu)
+                        .addContainerGap())))
         );
 
         pack();
