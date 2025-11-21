@@ -33,11 +33,11 @@ public class MainForm extends javax.swing.JFrame {
             tabMenu.addTab("수강신청", new StudentEnrollForm(myID));
             tabMenu.addTab("성적조회", new StudentGradeForm(myID));
         } else if (role.equals("교수")) {
-            tabMenu.addTab("강의관리", new javax.swing.JPanel());
+            tabMenu.addTab("강의관리", new AdminLectureForm());
             tabMenu.addTab("성적입력", new ProfessorGradeForm(myID));
         } else {
-            tabMenu.addTab("사용자관리", new javax.swing.JPanel());
-            tabMenu.addTab("학사관리", new javax.swing.JPanel());
+            tabMenu.addTab("사용자관리", new AdminUser());
+            tabMenu.addTab("강의관리", new AdminLectureForm());
         }
     }
 
